@@ -19,8 +19,10 @@ Build a note taking up, that can extends children to the n level, use local stor
 #### Screenshot
 
 *** Screenshot 1 ***
-![Primary Note](https://github.com/ajai-sandy/notesApp/PrimaryNote.png)
+
+![Primary Note](https://github.com/ajai-sandy/notesApp/blob/master/primaryNote.png)
 
 *** Screenshot 2 ***
-![Secondary Note](https://github.com/ajai-sandy/notesApp/secondaryNote.png)
+
+![Secondary Note](https://github.com/ajai-sandy/notesApp/blob/master/secondaryNote.png)
 
