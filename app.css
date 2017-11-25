@@ -1,0 +1,68 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+li {
+  margin-left: 20px;
+}
+
+.form {
+    display: inline;
+    text-align: center;
+    padding: 10px;
+}
+
+.form input{
+  padding: 10px;
+}
+
+.form button {
+  padding: 10px;
+  background : transparent;
+  cursor:pointer;
+  margin-left: 10px;
+  font-size: 14px;
+  border: 0;
+  background: #eee;
+}
+
+.container {
+  display: inline-block;
+  border: 1px solid #eee;
+  margin: 5px;
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.title {
+  background: #eee;
+  padding: 10px;
+}
+
+.message {
+  padding: 10px;
+}
+
+.buttons button {
+  padding: 10px;
+  background: transparent;
+  margin: 5px;
+}
+
+.buttons button:first-child {
+  background: #21cc21;
+  color: white;
+  border: 0;
+  width: 50%;
+}
+.buttons button:last-child {
+  background: red;
+  color: white;
+  border: 0;
+  width: 50%;
+}
+
+.buttons {
+  display: flex;
+  align-content: space-between;
+}

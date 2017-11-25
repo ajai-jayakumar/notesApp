@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <base href="/">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./app.css">
+  </head>
+
+  <body ng-app="myApp" ng-controller="defaultCtrl" ng-cloak>
+
+    <div class="form" ng-hide="hidePrimary">
+      <form name="primaryNotes" novalidate>
+        <input type="text" ng-model="msg" required>
+        <button ng-click="addNew(msg)" ng-disabled="primaryNotes.$invalid">Create</button>
+      </form>
+    </div>
+
+
+    <div class="form" ng-show="hidePrimary">
+      <form name="secondaryNotes" novalidate>
+        <input type="text" ng-model="subMsg" required>
+        <button ng-click="add(subMsg)" ng-disabled="secondaryNotes.$invalid">Create Sub Notes</button>
+      </form>
+    </div>
+    <ul>
+      <li ng-repeat="data in tree" ng-include="'tree_item_renderer.html'"></li>
+    </ul>
+    <script type="text/ng-template" id="tree_item_renderer.html">
+      <div class="container">
+        <div class="title"> {{data.name}} </div>
+        <div class="message"> {{data.msg}} </div>
+        <div class="buttons">
+          <button ng-click="addSubNotes(data)">Add note</button>
+          <button ng-click="delete(data, $index)">Delete note</button>
+        </div>
+      </div>
+      <ul>
+        <li ng-repeat="data in data.nodes" ng-include="'tree_item_renderer.html'"></li>
+      </ul>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+  </body>
+
+</html>
